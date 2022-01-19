@@ -1,28 +1,25 @@
 public class Elevator {
-    public static Integer[] elev(Integer floor){
-        Integer elevator1 = 1;
-        Integer elevator2 = 3;
-        Integer elevator3 = 5;
+    private int id;
+    private int floor;
 
-        Integer[] elev = new Integer[3];
 
-        Integer max_floor = 9;
-        Integer min_floor = 1;
+    public Elevator(int id,int floor){
+        this.id = id;
+        this.floor = floor;
 
-        Integer dist1 = Math.abs(floor - elevator2);
-        Integer dist2 = Math.abs(floor - elevator3);
-
-        if(dist1 > dist2){
-            elevator3 = floor;
-        }
-        else{
-            elevator2 = floor;
-        }
-
-        elev[0] = elevator1;
-        elev[1] = elevator2;
-        elev[2] = elevator3;
-
-        return elev;
     }
+    @Override
+    public String toString(){
+        return "Номер лифта: "+this.id+" "+"Этаж лифта: "+this.floor;
+    }
+
+    public int getFloor(){
+        return floor;
+    }
+    public void setFloor(int floor){
+        this.floor = floor;
+    }
+
+
+
 }

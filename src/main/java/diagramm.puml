@@ -1,6 +1,18 @@
 @startuml
 'https://plantuml.com/sequence-diagram
 
-Main ..> Elevator
+Main : bulding.callElevator()
+
+Main ..> Building
+Building : callElevator()
+Building : setStatus()
+Building : isAvailableOnFloor(int floor)
+Building : setDistance(int floor)
+
+Building ..* Elevator
+
+Elevator : toString()
+Elevator : getFloor()
+Elevator : setFloor()
 
 @enduml
