@@ -9,15 +9,15 @@ public class Building {
     Elevator elev3 = new Elevator(3,9);
 
 
-    public void callElevator(){
-        System.out.println("Введите этаж: ");
-        Scanner scanner = new Scanner(System.in);
-        if(scanner.hasNextInt()){
-            isAvailableOnFloor(scanner.nextInt());
-        }else {
-            System.out.println("Ошибка! Введите корректный этаж");
-        }
-
+    public void callElevator(Integer floor){
+//        System.out.println("Введите этаж: ");
+//        Scanner scanner = new Scanner(System.in);
+//        if(scanner.hasNextInt()){
+//            isAvailableOnFloor(floor);
+//        }else {
+//            System.out.println("Ошибка! Введите корректный этаж");
+//        }
+        isAvailableOnFloor(floor);
     }
 
     public void setStatus(){
