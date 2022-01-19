@@ -12,7 +12,9 @@ public class Main {
             }else {
                 System.out.println("Ошибка! Введите корректный этаж");
             }
-            bulding.callElevator(floor);
+            if(floor != null){
+                bulding.callElevator(floor);
+            }
         }
     }
 }
